@@ -2,6 +2,8 @@
 
 VS Code、GitHub Copilot App、GitHub Copilot CLI の使い分けを体験するハンズオンです。[ハンズオンガイド](docs/github-copilot-hands-on.md)に沿って進めてください。
 
+各クライアントの機能を個別に試したい場合は、[機能別デモカタログ（82件）](docs/github-copilot-demo-catalog.md)を参照してください。
+
 ## 事前準備
 
 Git と Node.js 22 以降を用意し、このリポジトリを手元に取得します。依存パッケージのインストールは不要です。各クライアントの準備とサインインは[ハンズオンガイドの事前準備](docs/github-copilot-hands-on.md#2-事前準備)を参照してください。
