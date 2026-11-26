@@ -40,7 +40,7 @@
 ## 3. デモ手順
 
 
-### 異なる入口を支える共通基盤
+### 異なる入口を支える共通基盤：Microsoft Copilot Harness
 
 ```mermaid
 flowchart TB
@@ -156,12 +156,13 @@ flowchart TB
    node --input-type=module -e "import { slug } from './src/slug.mjs'; console.log(slug('  Hello World  '))"
    ```
 
-2. `copilot` を起動し、`Shift+Tab` で Plan 表示に切り替える。「`'  Hello World  '` が `hello-world` ではなく `-hello-world-` になる。前後の空白だけを対象に、既存動作を維持する最小修正と回帰テストの計画を作って。まだ編集しないで」と依頼する。計画に **回帰テストを先に追加して失敗を確認する**手順がなければ追記を求める。
+2. 配布教材のフォルダーで `copilot` を起動するか、同じフォルダーを開いた VS Code のコマンドパレットで **Chat: New Copilot CLI Session** を選ぶ。どちらの場合も、起動した CLI で `Shift+Tab` を押して Plan 表示に切り替える。「`'  Hello World  '` が `hello-world` ではなく `-hello-world-` になる。前後の空白だけを対象に、既存動作を維持する最小修正と回帰テストの計画を作って。まだ編集しないで」と依頼する。計画に **回帰テストを先に追加して失敗を確認する**手順がなければ追記を求める。
 3. 通常の対話モードに切り替え、確認した計画だけを実装させる。`/diff` で変更を読み、別ターミナルで `node --test` と上の再現コマンドを再実行する。実装とテスト以外が変更されていないことも確認する。**到達点**：既存・追加テストが通り、同じ入力で `hello-world` が出る。早く終わった参加者は `/exit` 後に `copilot --resume` で履歴を開き直す。
 
 **公式出典**
 
 - [Using GitHub Copilot CLI](https://docs.github.com/en/copilot/how-tos/copilot-cli/use-copilot-cli/overview)
+- [Start a Copilot CLI session in VS Code](https://code.visualstudio.com/docs/agents/run/chat-view#_start-a-copilot-cli-session)
 - [GitHub Copilot CLI command reference](https://docs.github.com/en/copilot/reference/copilot-cli-reference/cli-command-reference)
 - [Working with multiple GitHub Copilot CLI sessions](https://docs.github.com/en/enterprise-cloud@latest/copilot/how-tos/copilot-cli/use-copilot-cli/work-with-multiple-sessions)
 - [Test runner（Node.js v22）](https://nodejs.org/docs/latest-v22.x/api/test.html#test-runner)
